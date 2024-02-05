@@ -30,9 +30,7 @@ namespace Holidays.Controllers
             var workHolidays = await _holidayContext.Holidays.ToListAsync();
 
             holidays.AddRange(publicHolidays.Select(holiday => new HolidayDto(holiday.Date, holiday.Name)));
-            holidays.AddRange(workHolidays.Select(holiday => new HolidayDto(
-                new DateTime(year, holiday.Date.Month, holiday.Date.Day),
-                holiday.Name)));
+            holidays.AddRange(workHolidays.Select(holiday => new HolidayDto(new DateTime(year, holiday.Date.Month, holiday.Date.Day), holiday.Name)));
 
             return Ok(holidays);
         }

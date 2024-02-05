@@ -92,7 +92,7 @@ namespace Holidays.IntegrationTests.Tests
             {
                 Assert.AreEqual(
                     holiday.Name, holidays[index].Name,
-                    $"Expected Holiday '{holiday.Name}' to be at index {index} in the holiday collection");
+                    $"Expected Holiday '{holiday.Name} of ({year})' to be at index {index} in the holiday collection");
             }
         }
 

@@ -12,5 +12,7 @@ namespace Holidays.Model
         public bool Global { get; set; }
         public int LaunchYear { get; set; }
         public string Type { get; set; }
+
+        public override string ToString() => $"{Date:dd/MMM/yyy} {Date.Date.DayOfWeek}";
     }
 }

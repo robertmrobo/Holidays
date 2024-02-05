@@ -16,5 +16,7 @@ namespace Holidays.Model
             Date = date;
             Name = name;
         }
+        
+        public override string ToString() => $"{Date:dd/MMM/yyy} {Date.Date.DayOfWeek}";
     }
 }
